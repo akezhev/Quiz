@@ -1,5 +1,6 @@
 <?php
 error_reporting(E_ALL);
+session_start();
 
 include_once "./views/header.php";
 // router
@@ -12,6 +13,14 @@ try {
             include "login.php";
             break;
         case "1":
+            $email = $_POST['email'] ?? '';
+            if ($email == '') {
+                echo '<p>Отсуттсвует email</p>';
+                echo '<a href="/">Назад</a>';
+                include_once "./views/footer.php";
+                exit();
+            }
+            $_SESSION['email'] = $email;
             include "page1.php";
             break;
         case "2":
@@ -33,6 +42,27 @@ try {
 
 // end router
 include_once "./views/footer.php";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
