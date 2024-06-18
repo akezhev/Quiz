@@ -20,6 +20,7 @@
                 <button type="submit" class="btn btn-warning">Login</button>
             </div>
         </form>
+        <p>Don't have an account? <a href="/index.php?route=registration">Register</a></p>
     </div>
 </div>
     
